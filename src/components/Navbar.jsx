@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <nav className="nav">
-      <a href="/home" className="site-title">BeneFi</a>
+      <a href="/" className="site-title">BeneFi</a>
       <li>
         <a href="/request-send">Request/Send</a>
       </li>
@@ -18,6 +18,9 @@ function Navbar() {
       </li>
       <li>
         <a href="/sign-in">Sign In</a>
+      </li>
+      <li>
+        <a href="/sign-up">Sign Up</a>
       </li>
 
     </nav>
