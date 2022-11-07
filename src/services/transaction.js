@@ -27,3 +27,13 @@ export const createTransaction = async (userData) => {
   }
 }
 
+export const linkProfile = async (userId, transactionId) => {
+  try {
+    const response = await api.put(`/transactions/${transactionId}/ ${userId}`)
+    return response.data
+
+  } catch (error) {
+    throw error
+  }
+}
+
