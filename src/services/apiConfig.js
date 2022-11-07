@@ -38,4 +38,9 @@ const usersApi = axios.create({
 
 console.log(usersApi)
 
-export default { api, usersApi };
+const bothApis = {
+  api,
+  usersApi
+}
+
+export default bothApis;
