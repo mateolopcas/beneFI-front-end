@@ -1,4 +1,5 @@
 import React from 'react'
+import {updateUser} from "../../services/user.js"
 
 function Profile() {
   return (
