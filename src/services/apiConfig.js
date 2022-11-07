@@ -3,7 +3,7 @@ import axios from "axios";
 let apiUrl;
 
 const apiUrls = {
-  production: "https://benefi-backend-production.up.railway.app/userprofiles/",
+  production: "https://benefi-backend-production.up.railway.app/transactions",
   development: "http://localhost:3000"
 }
 
@@ -19,4 +19,23 @@ const api = axios.create({
 
 console.log(api)
 
-export default api;
+let usersApiUrl;
+
+const usersApiUrls = {
+  production: "https://benefi-backend-production.up.railway.app/userprofiles/",
+  development: "http://localhost:3000"
+}
+
+if (window.location.hostname === "localhost") {
+  usersApiUrl = usersApiUrls.development;
+} else {
+  usersApiUrl = usersApiUrls.production;
+}
+
+const usersApi = axios.create({
+  baseURL: usersApiUrl,
+});
+
+console.log(usersApi)
+
+export default { api, usersApi };
