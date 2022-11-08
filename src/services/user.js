@@ -2,7 +2,7 @@ import usersApi from "./apiConfig"
 
 export const getUsers = async () => {
   try {
-    const response = await usersApi.get("/userProfiles");
+    const response = await usersApi.usersApi.get("/userProfiles");
     return response.data;
   } catch (error) {
     throw error;
@@ -11,7 +11,8 @@ export const getUsers = async () => {
 
 export const getUser = async (id) => {
   try {
-    const response = await usersApi.get(`/userProfiles/${id}`);
+    console.log(usersApi)
+    const response = await usersApi.usersApi.get(`/userProfiles/${id}`);
     return response.data;
   } catch (error) {
     throw error;
