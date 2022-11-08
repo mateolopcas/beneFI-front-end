@@ -1,5 +1,5 @@
 import React from 'react'
-import Transaction from '.../components/Transaction.jsx'
+import Transaction from '../../components/Transaction'
 
 function Transactions(props) {
   props.user.transactions.sort((a, b) => b.date - a.date)
