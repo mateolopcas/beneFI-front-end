@@ -1,16 +1,22 @@
 import { useState } from 'react'
-import { updateUser } from "../../services/user"
+import { updateUser, deleteUser } from "../../services/user"
 import { useNavigate } from "react-router-dom"
+import ProfileData from '../../components/ProfileData'
 
-function Profile({user}) {
+function Profile({user, setUser}) {
   const [profile, setProfile] = useState({
+    _id: user._id,
     email: user.email,
     firstName: user.firstName,
     lastName: user.lastName,
     password: user.password,
-    avatarImg: user.avatarImg
+    avatarImg: user.avatarImg,
+    confirmPassword: user.password
   })
 
+  const [remove, setRemove] = useState(false)
+  const [edit, setEdit] = useState(false)
+  
   let navigate = useNavigate()
 
   const handleChange = (e) => {
@@ -22,49 +28,79 @@ function Profile({user}) {
     }))
   }
 
+  const handleEdit = (e) => {
+    e.target.style.display = "none"
+    setEdit(true)
+
+  }
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    setRemove(true)
+    await deleteUser(user._id)
+
+  }
   const handleSubmit = async (e) => {
     e.preventDefault()
     await updateUser(user._id, profile)
+    setUser(profile)
     navigate('/', { replace: true })
   }
-  const { firstName, lastName, email, password, confirmPassword } = profile
+  const { firstName, lastName, email, password, confirmPassword, avatarImg } = profile
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          placeholder="email"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="First Name"
-          name="firstName"
-          value={firstName}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="Last Name"
-          name="lastName"
-          value={lastName}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-        />
-        <input
-          placeholder="Confirm password"
-          name="confirmPassword"
-          value={confirmPassword}
-          onChange={handleChange}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      
+      {edit === false && <ProfileData user={user} />}
+      {edit === true &&
+        <form onSubmit={handleSubmit}>
+          <div>
+          <label>Email Address: </label><input
+            placeholder="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+          </div>
+          <div>
+          <label>First Name: </label><input
+            placeholder="First Name"
+            name="firstName"
+            value={firstName}
+            onChange={handleChange}
+          /></div>
+          <div>
+          <label>Last Name: </label><input
+            placeholder="Last Name"
+            name="lastName"
+            value={lastName}
+            onChange={handleChange}
+          /></div>
+          <div><label>Password: </label><input
+            placeholder="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          /></div>
+          <div><label>Confirm Password: </label><input
+            placeholder="Confirm password"
+            name="confirmPassword"
+            value={confirmPassword}
+            onChange={handleChange}
+          /></div>
+          <div><label>Avatar Image: </label><input
+            placeholder="Avatar Image"
+            name="avatarImg"
+            value={avatarImg}
+            onChange={handleChange}
+          /></div>
+          <button type="submit">Submit</button>
+        </form>
+      }
 
+      <button onClick={handleEdit} >Edit Profile</button>
+      <button onClick={handleDelete}>Delete Profile</button>
+      
+      
     </div>
   )
 }
