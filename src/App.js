@@ -8,21 +8,26 @@ import Request from "./screens/Request-send/Request"
 import Transactions from "./screens/Transaction/Transactions"
 import SignIn from "./screens/SignIn/SignIn"
 import SignUp from "./screens/SignUp/SignUp"
+import { useState} from "react"
+
 
 
 function App() {
+  const [user, setUser] = useState(null)
+  
+
   return (
     <div>
       <Navbar />
       <div className="Container">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/request" element={<Request />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/transactions" element={<Transactions />} />
-          <Route path="/sign-in" element={<SignIn />} />
-          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/" element={<Home user={user} />} />
+          <Route path="/profile" element={<Profile user={user} />} />
+          <Route path="/request" element={<Request user={user}/>} />
+          <Route path="/about" element={<About user={user}/>} />
+          <Route path="/transactions" element={<Transactions user={user}/>} />
+          <Route path="/sign-in" element={<SignIn setUser={setUser}/>} />
+          <Route path="/sign-up" element={<SignUp setUser={setUser} />} />
         </Routes>
       </div>
     </div>
