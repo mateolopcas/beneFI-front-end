@@ -40,9 +40,9 @@ const SignIn = (props) => {
       )
       const response = await getUser(current)
 
-      props.setUser(response)
+      await props.setUser(response)
 
-      navigate("/request", { replace: true })
+      navigate("/request-send", { replace: true })
 
 
 
