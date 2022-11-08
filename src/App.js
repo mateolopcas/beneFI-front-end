@@ -16,11 +16,11 @@ function App() {
   const [user, setUser] = useState({
 
 
-    _id: "636ab43567f2613290b70719",
-    email: "Priscilla_Weatcroft1245@sveldo.biz",
-    firstName: "Priscilla",
-    lastName: "Weatcroft",
-    password: "123456",
+    _id: "",
+    email: "",
+    firstName: "",
+    lastName: "",
+    password: "",
     avatarImg: "",
     transactions: [ ],
     

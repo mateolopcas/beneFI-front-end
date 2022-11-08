@@ -37,13 +37,14 @@ function Profile({user, setUser}) {
     e.preventDefault()
     setRemove(true)
     await deleteUser(user._id)
+    navigate('/', { replace: true })
 
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
     await updateUser(user._id, profile)
     setUser(profile)
-    navigate('/', { replace: true })
+    navigate('/profile', { replace: true })
   }
   const { firstName, lastName, email, password, confirmPassword, avatarImg } = profile
 
