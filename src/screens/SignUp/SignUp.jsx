@@ -4,8 +4,7 @@ import { createUser } from "../../services/user"
 
 
 
-const SignUp = (props) => {
-
+export default function SignUp() {
   const [form, setForm] = useState({
     email: '',
     firstName: '',
@@ -14,55 +13,89 @@ const SignUp = (props) => {
     confirmPassword: '',
     isError: false,
     errorMsg: '',
-
-
-
   })
+
   let navigate = useNavigate()
 
-  const handleChange = (e) =>
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    const { name, value } = e.target
     setForm({
       ...form,
-      [e.target.name]: e.target.value,
+      [name]: value,
     })
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const { setUser } = props;
-    try {
-      const user = await createUser(form)
-      setUser(user)
-      navigate("/transactions", { replace: true })
-    } catch (error) {
-      console.error(error)
-      setForm({
-        firstName: '',
-        lastName: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
-        isError: true,
-        errorMsg: "Sign Up Details Invalid"
-      })
-    }
+    await createUser(form)
+    navigate("/request", { replace: true })
   }
 
-  const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : '';
-    if (form.isError) {
-      return (
-        <button type='submit' className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      )
-    } else {
-      return (
-        <button type='submit'>Sign Up</button>
-      )
-    }
-  }
 
-  const { firstName, lastName, email, password, confirmPassword } = form
+
+
+
+
+
+
+  // const [form, setForm] = useState({
+  //   email: '',
+  //   firstName: '',
+  //   lastName: '',
+  //   password: '',
+  //   confirmPassword: '',
+  //   isError: false,
+  //   errorMsg: '',
+
+
+
+  // })
+  // let navigate = useNavigate()
+
+  // const handleChange = (e) =>
+  //   setForm({
+  //     ...form,
+  //     [e.target.name]: e.target.value,
+  //   })
+
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault()
+  //   const { setUser } = props;
+  //   try {
+  //     const user = await createUser(form)
+  //     setUser(user)
+  //     navigate("/transactions", { replace: true })
+  //   } catch (error) {
+  //     console.error(error)
+  //     setForm({
+  //       firstName: '',
+  //       lastName: '',
+  //       email: '',
+  //       password: '',
+  //       confirmPassword: '',
+  //       isError: true,
+  //       errorMsg: "Sign Up Details Invalid"
+  //     })
+  //   }
+  // }
+
+  // const renderError = () => {
+  //   const toggleForm = form.isError ? 'danger' : '';
+  //   if (form.isError) {
+  //     return (
+  //       <button type='submit' className={toggleForm}>
+  //         {form.errorMsg}
+  //       </button>
+  //     )
+  //   } else {
+  //     return (
+  //       <button type='submit'>Sign Up</button>
+  //     )
+  //   }
+  // }
+
+  // const { firstName, lastName, email, password, confirmPassword } = form
   return (
 
     <div className="form-container">
@@ -74,7 +107,7 @@ const SignUp = (props) => {
             required
             type="text"
             name="firstName"
-            value={firstName}
+            value={form.firstName}
             onChange={handleChange}
           />
           <div className="label-input">
@@ -83,7 +116,7 @@ const SignUp = (props) => {
               required
               type="text"
               name="lastName"
-              value={lastName}
+              value={form.lastName}
               onChange={handleChange}
             />
           </div>
@@ -93,7 +126,7 @@ const SignUp = (props) => {
               required
               type="email"
               name="email"
-              value={email}
+              value={form.email}
               onChange={handleChange}
             />
           </div>
@@ -103,7 +136,7 @@ const SignUp = (props) => {
               required
               type="password"
               name="password"
-              value={password}
+              value={form.password}
               onChange={handleChange}
             />
           </div>
@@ -112,18 +145,18 @@ const SignUp = (props) => {
             <input
               required
               name="confirmPassword"
-              value={confirmPassword}
+              value={form.confirmPassword}
               type="password"
               onChange={handleChange}
             />
           </div>
         </div>
-        {renderError()}
+        <button type="submit">Sign up</button>
       </form>
     </div>
   )
 
 }
 
-export default SignUp;
+
 

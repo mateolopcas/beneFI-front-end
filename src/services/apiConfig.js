@@ -1,4 +1,4 @@
-import axios from "axios";
+import Axios from 'axios';
 
 let apiUrl;
 
@@ -13,7 +13,7 @@ if (window.location.hostname === "localhost") {
   apiUrl = apiUrls.production;
 }
 
-const api = axios.create({
+const api = Axios.create({
   baseURL: apiUrl,
 });
 
@@ -32,7 +32,7 @@ if (window.location.hostname === "localhost") {
   usersApiUrl = usersApiUrls.production;
 }
 
-const usersApi = axios.create({
+const usersApi = Axios.create({
   baseURL: usersApiUrl,
 });
 
