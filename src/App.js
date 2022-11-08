@@ -13,7 +13,15 @@ import { useState} from "react"
 
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState({
+
+    email: "",
+    firstName: "",
+    lastName: "",
+    password: "",
+    avatarImg: "user.avatarImg",
+    transactions: []
+  })
   
 
   return (

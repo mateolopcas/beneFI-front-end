@@ -2,14 +2,13 @@ import { useState } from 'react'
 import { updateUser } from "../../services/user"
 import { useNavigate } from "react-router-dom"
 
-
-function Profile(props) {
+function Profile({user}) {
   const [profile, setProfile] = useState({
-    email: props.email,
-    firstName: props.firstName,
-    lastName: props.lastName,
-    password: props.password,
-    avatarImg: props.avatarImg
+    email: user.email,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    password: user.password,
+    avatarImg: user.avatarImg
   })
 
   let navigate = useNavigate()
@@ -25,7 +24,7 @@ function Profile(props) {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await updateUser(props._id, profile)
+    await updateUser(user._id, profile)
     navigate('/', { replace: true })
   }
   const { firstName, lastName, email, password, confirmPassword } = profile
