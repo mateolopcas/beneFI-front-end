@@ -11,7 +11,6 @@ export const getUsers = async () => {
 
 export const getUser = async (id) => {
   try {
-    console.log(usersApi)
     const response = await usersApi.usersApi.get(`/userProfiles/${id}`);
     return response.data;
   } catch (error) {
