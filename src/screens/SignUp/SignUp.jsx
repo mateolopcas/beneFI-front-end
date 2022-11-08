@@ -27,6 +27,7 @@ export default function SignUp() {
   }
 
   const handleSubmit = async (e) => {
+    //password validation
     e.preventDefault()
     await createUser(form)
     navigate("/request", { replace: true })
