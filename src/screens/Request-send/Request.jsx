@@ -1,8 +1,11 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 
 function Request() {
+  const [request, setRequest] = useState(false)
+
+
   return (
-    <div>
+    <div className={`send-screen ${request ? `request`: `send`}`}>
       <h1>hi</h1>
     </div>
   )
