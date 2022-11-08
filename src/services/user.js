@@ -1,4 +1,3 @@
-import apiConfig from "./apiConfig";
 import usersApi from "./apiConfig"
 
 export const getUsers = async () => {
@@ -21,7 +20,8 @@ export const getUser = async (id) => {
 
 export const createUser = async (userData) => {
   try {
-    const response = await usersApi.post("/userProfiles", userData);
+    console.log(usersApi)
+    const response = await usersApi.usersApi.post("/userProfiles", userData);
     return response.data;
   } catch (error) {
     throw error
