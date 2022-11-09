@@ -12,6 +12,7 @@ function Transactions({user}) {
     <div className='transactions-screen'>
       <h2>Transaction History:</h2>
       <table>
+        <thead>
         <tr>
           <th>USD</th>
           <th>Cryptocurrency</th>
@@ -19,6 +20,8 @@ function Transactions({user}) {
           <th>To</th>
           <th>Sent On</th>
         </tr>
+        </thead>
+        <tbody>
         {user.email.length > 0 &&
         user.transactions.map((transaction, index)=> {
           return (
@@ -29,6 +32,7 @@ function Transactions({user}) {
             )
           })
         }
+        </tbody>
       </table>
     </div>
   )
