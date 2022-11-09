@@ -104,25 +104,35 @@ function Request({user}) {
               onChange={handleChange}
             />
           </div>
-          <div className="label-input">
-            <label>Currency:</label>
-            <input
-              required
-              type="text"
-              name="currency"
-              value={form.currency}
-              onChange={handleChange}
-            />
+          <div className="label-select">
+            <label>Currency: </label>
+            <select
+            required
+            name='currency'
+            value={form.currency}
+            onChange={handleChange}
+            >
+              <option value=''>Select crypto</option>
+              <option value='Bitcoin'>Bitcoin</option>
+              <option value='Ethereum'>Ethereum</option>
+              <option value='Binance'>Binance</option>
+              <option value='Ada'>Ada</option>
+            </select>
           </div>
-          <div className="label-input">
-            <label>USD Amount: </label>
-            <input
-              required
-              type="text"
-              name="usdAmount"
-              value={form.usdAmount}
-              onChange={handleChange}
-            />
+          <div className="label-select">
+            <label>Amount: </label>
+            <select
+            required
+            name='usdAmount'
+            value={form.usdAmount}
+            onChange={handleChange}
+            >
+              <option value=''>Select amount</option>
+              <option value='25'>$25</option>               
+              <option value='50'>$50</option>
+              <option value='75'>$75</option>
+              <option value='100'>$100</option>
+            </select>
           </div>
         </div>
         <button type="submit">Send</button>
