@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar({user}) {
   return (
     <nav className="nav">
-      <a href="/" className="site-title">BeneFi</a>
+      <a href="/" className="site-title">b.</a>
       { user.email.length > 0 &&
       <li>
         <a href="/request-send">Request/Send</a>

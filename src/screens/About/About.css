@@ -1,0 +1,106 @@
+*{
+  padding:0;
+  margin:0;
+
+}
+
+body{
+  /* background-color: #12172b; */
+
+  background: -webkit-linear-gradient(
+    to left,
+    rgb(144, 132, 132)
+    #257e23
+  );
+
+  background: linear-gradient(
+    to left,
+    rgb(10, 3, 106),  /* rgb(85, 83, 146), */
+    #2e29bf
+  )
+}
+
+.container{
+  margin:20px 40px;
+  color:white;
+  display: flex;
+  flex-direction: row;
+}
+
+.heading{
+  font-size: 60px;
+  color:white;
+}
+
+.heading span{
+  font-style: italic;
+  font-size: 30px;
+}
+
+.profiles{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0px 20px 0px 90px 
+}
+
+.profile{
+  flex-basis: 130px;
+  transition: 600ms;
+  border-radius: 10px;
+
+}
+
+.profile:hover{
+  transform:scale(1.2);
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG-Kb1PH6misvmSk3glHRHycdlhotO2o39yA&usqp=CAU')
+  ;
+
+}
+
+.profile .profile-img{
+height: 210px;
+width: 210px;
+border-radius: 50%;
+filter: grayscale(100%);
+cursor: pointer;
+transition: 1000 ms;
+
+}
+
+.profile:hover .profile-img{
+  filter: grayscale(0);
+  
+
+}
+
+.user-name{
+  margin-top: 30px;
+  font-size:35px;
+
+}
+
+
+.profile h5{
+  font-size: 18px;
+  font-weight: 100;
+  letter-spacing: 3px;
+  color: #ccc
+
+}
+
+
+
+.profile p{
+  font-size: 20px;
+  margin-top: 20px;
+  
+  font-family: poppins, sans-serif;
+}
+
+#linkedin{
+  width: 100px;
+  height: 100px;
+  background-color: #2867b2;
+  border-radius: 6%;
+}

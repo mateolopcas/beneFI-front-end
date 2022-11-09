@@ -1,64 +1,81 @@
 import React from 'react'
+import "./About.css"
 
 function About() {
   return (
-    <div>
-      <div className="team-one">
-        <div className="team-container">
-          <img src="" className="about-image-left" alt="mateo" />
-          <div className="title-info">
-            <h3 className="titleOne">Mateo Lopez-Castillo</h3>
-            <p>Master of Chess, King of the North</p>
-          </div>
-        </div>
-      </div>
-      <div className="team-two">
-        <div className="team-container">
-          <div className="title-info">
-            <h3 className="titleTwo">
-              Alexis Herrera
-            </h3>
-            <p>
-              Hookah mujere y romo
-            </p>
-          </div>
-          <img src="" className="about-image-right" alt="alexis" />
-        </div>
 
-      </div>
-      <div className="team-one">
-        <div className="team-container">
-          <img src="" className="about-image-left" alt="martin" />
-          <div className="title-info">
-            <h3 className="titleOne">
-              Martin Galeano
-            </h3>
-            <p>Wall street entrepeaneur</p>
-          </div>
-        </div>
-      </div>
-      <div className="team-two">
-        <div className="team-container">
-          <div className="title-info">
-            <h3 className="titleTwo">Ethan Ling</h3>
-            <p>Valorant crank Radiant top 300 on leaderboard</p>
-          </div>
-          <img src="" className="about-image-right" alt="ethan" />
-        </div>
-      </div>
-      <div className="team-one">
-        <div className="team-container">
-          <img src="" className="about-image-left" alt="luis" />
-          <div className="title-info">
-            <h3 className="titleOne">Luis Sanchez</h3>
-            <p>You're going to die tomorrow, Lord Bolton.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class ="container">
+<h1 class = "heading"><span>meet  </span> Our Team</h1>
 
-    </div>
+<div class = "profiles">
+  <div class = "profile">
+    <img src = "https://media-exp1.licdn.com/dms/image/D5603AQEMgKp6o5bTCg/profile-displayphoto-shrink_400_400/0/1665588615656?e=1673481600&v=beta&t=1bele8LmrTvlglpFgQ6xDgUbsy1d8YiVmgGe2WFYigw" class = "profile-img">
+    </img>
+
+    <h3 class = "user-name">Mateo</h3>
+    <h5>Elite Chess Player</h5>
+    <p>Makes Magnus Carlsen look like a kindergartener and he's no slouch when it comes to coding!
+       </p>
+          <div id="linkedin"></div>
+  </div>
+
+</div>
+
+<div class = "profiles">
+  <div class = "profile">
+    <img src = "https://ca.slack-edge.com/T0351JZQ0-U03RZMQS50X-09bcb6b6cccc-512" class = "profile-img">
+    </img>
+
+    <h3 class = "user-name">Alexis</h3>
+    <h5>Back End </h5>
+    <p>Cool dude and a  back-end logic whiz! With his and Mateo's combined strength, they're an unstoppable force!
+    </p>
+  </div>
+
+</div>
+
+<div class = "profiles">
+  <div class = "profile">
+    <img src = "
+https://ca.slack-edge.com/T0351JZQ0-U03S7LK3DPG-cc3b6e5026c0-512
+" class = "profile-img">
+    </img>
+
+    <h3 class = "user-name">Luis</h3>
+    <h5> Front End</h5>
+    <p>Without this man, routes and most of the front end wouldn't be possible.  </p>
+  </div>
+
+</div>
+
+
+<div class = "profiles">
+  <div class = "profile">
+    <img src = "https://media-exp1.licdn.com/dms/image/C4E03AQGkoqISDwhAvg/profile-displayphoto-shrink_800_800/0/1630614273542?e=1673481600&v=beta&t=TX-sIrEsJKQNHpXuoXBFmpYA0UVS3IXqPlIKgnOg_RE" class = "profile-img">
+    </img>
+
+    <h3 class = "user-name">Marty</h3>
+    <h5> Figma Wizard</h5>
+    <p>Can create amazing figma animations and transitions. (If only anima worked... -.-)  </p>
+  </div>
+
+</div>
+
+
+<div class = "profiles">
+  <div class = "profile">
+    <img src = "https://ca.slack-edge.com/T0351JZQ0-U03SSTW8VTK-25896eff75b7-512" class = "profile-img">
+    </img>
+
+    <h3 class = "user-name">Ethan</h3>
+    <h5> Joe Shmoe!</h5>
+    <p> Just your average joe that's just here</p>
+  </div>
+
+</div>
+
+</div >
+
   )
 }
-
-export default About
+export default About;
