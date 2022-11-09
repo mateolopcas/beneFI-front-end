@@ -5,13 +5,14 @@ function Navbar({user}) {
     <nav className="nav">
       <a href="/" className="site-title">BeneFi</a>
       
-      {user && <div className="welcome"> 
-        <span>Welcome, {user.firstName}!</span></div>}
-      { user.email.length > 0 &&
+      <div>
+        {user.email.length > 0 &&
+          <span>Welcome, {user.firstName}!</span> }
+      </div>
       <li>
         <a href="/request-send">Request/Send</a>
       </li>
-      }
+      
       { user.email.length > 0 &&
       <li>
         <a href="/profile">Profile</a>
