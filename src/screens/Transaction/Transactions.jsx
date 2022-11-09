@@ -4,7 +4,7 @@ import React from 'react'
 import Transaction from '../../components/Transaction.jsx'
 
 function Transactions({user}) {
-  if (user.email.length > 0) {
+  if (user.transactions.length > 0) {
     user.transactions.sort((a, b) => b.date - a.date)
   }
 
@@ -22,7 +22,7 @@ function Transactions({user}) {
         </tr>
         </thead>
         <tbody>
-        {user.email.length > 0 &&
+        {user.transactions.length > 0 &&
         user.transactions.map((transaction, index)=> {
           return (
               <Transaction
