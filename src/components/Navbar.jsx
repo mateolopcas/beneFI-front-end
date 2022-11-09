@@ -27,7 +27,7 @@ function Navbar({user}) {
         <a href="/About">About</a>
       </li>
       <li>
-        <a href="/sign-in">Sign In</a>
+        <a href="/sign-in">Login</a>
       </li>
       <li>
         <a href="/sign-up">Sign Up</a>

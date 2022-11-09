@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import { getUser } from "../../services/user"
 
 
-const SignIn = (props) => {
+const LogIn = (props) => {
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
@@ -63,13 +63,13 @@ const SignIn = (props) => {
         <button type="submit" className={toggleForm}>{form.errorMsg}</button>
       )
     } else {
-      <button type="submit">Sign In</button>
+      <button type="submit">Login</button>
     }
   }
 
   return (
     <div className="form-container">
-      <h3>Sign in</h3>
+      <h3>Login</h3>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
           <label>email:</label>
@@ -92,14 +92,14 @@ const SignIn = (props) => {
           />
         </div>
 
-        <button type="submit">Sign in</button>
+        <button type="submit">Login</button>
         {renderError()}
       </form>
     </div>
   )
 }
 
-export default SignIn;
+export default LogIn;
 
 
 
