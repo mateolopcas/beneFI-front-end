@@ -1,36 +1,42 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Navbar({user}) {
+function Navbar({ user }) {
   return (
     <nav className="nav">
+
       <a href="/" className="site-title">BeneFi</a>
-      
+
       <div>
         {user.email.length > 0 &&
-          <span>Welcome, {user.firstName}!</span> }
+          <span>Welcome, {user.firstName}!</span>}
       </div>
-      <li>
-        <a href="/request-send">Request/Send</a>
-      </li>
+
+      <Link to="/" className="site-title"><u>b.</u></Link>
+      {user.email.length > 0 &&
+
+        <li>
+          <Link to="/request-send">Request/Send</Link>
+        </li>
       
-      { user.email.length > 0 &&
-      <li>
-        <a href="/profile">Profile</a>
-      </li>
+      {user.email.length > 0 &&
+        <li>
+          <Link to="/profile">Profile</Link>
+        </li>
       }
-      { user.email.length > 0 &&
-      <li>
-        <a href="/transactions">Transactions</a>
-      </li>
+      {user.email.length > 0 &&
+        <li>
+          <Link to="/transactions">Transactions</Link>
+        </li>
       }
       <li>
-        <a href="/About">About</a>
+        <Link to="/About">About</Link>
       </li>
       <li>
-        <a href="/sign-in">Sign In</a>
+        <Link to="/sign-in">Sign In</Link>
       </li>
       <li>
-        <a href="/sign-up">Sign Up</a>
+        <Link to="/sign-up">Sign Up</Link>
       </li>
 
     </nav>

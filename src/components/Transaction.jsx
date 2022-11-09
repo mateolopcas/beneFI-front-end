@@ -1,9 +1,14 @@
 function Transaction(props) {
   let { data } = props
+  let shortDate = data.sentOn.substring(0, 10)
   return (
-    <li className='transaction'>
-      {data.usdAmount}  {data.currency}  {data.from}  {data.to}  {data.sentOn}
-    </li>
+    <tr className='transaction'>
+      <td>${data.usdAmount}</td>
+      <td>{data.currency}</td>
+      <td>{data.from}</td>
+      <td>{data.to}</td>
+      <td>{shortDate}</td>
+    </tr>
   )
 }
 

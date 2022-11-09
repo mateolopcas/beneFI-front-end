@@ -1,0 +1,36 @@
+label{
+  color:white;
+  font-size: 24px;
+  
+}
+
+
+
+.form-container{
+  text-align: left;
+  font-size: 70px;
+  color:white;
+  margin: 20px;
+  
+}
+
+
+
+
+
+input{
+  align-items:center;
+  font-size: 25px;
+  transition: transform .2s;
+  margin: 0 auto;
+
+}
+
+
+input:hover{
+  transform: scale(1.05);
+}
+
+.button{
+  background-color:red;
+}
