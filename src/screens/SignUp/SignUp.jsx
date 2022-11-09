@@ -5,7 +5,7 @@ import "./SignUp.css"
 
 
 
-export default function SignUp() {
+export default function SignUp({setUser}) {
   const [form, setForm] = useState({
     email: '',
     firstName: '',
@@ -30,8 +30,9 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     //password validation
     e.preventDefault()
-    await createUser(form)
-    navigate("/request", { replace: true })
+    let newUser = await createUser(form)
+    setUser(newUser)
+    navigate("/request-send", { replace: true })
   }
 
 

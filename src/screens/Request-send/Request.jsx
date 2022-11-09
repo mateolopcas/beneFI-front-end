@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { createTransaction, linkProfile} from '../../services/transaction.js'
-import { getUsers } from '../../services/user.js'
+import { createTransaction, linkProfile } from '../../services/transaction.js'
+import { getUsers, getUser } from '../../services/user.js'
 import { Link } from 'react-router-dom'
 
 function Request({user}) {
@@ -55,6 +55,7 @@ function Request({user}) {
         linkProfile(user._id, newTransaction._id)
       }
     })
+    user.transactions.push(newTransaction)
     if (!request) {
       alert(`Transaction sent!`)
       setForm({
