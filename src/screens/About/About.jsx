@@ -55,7 +55,7 @@ https://ca.slack-edge.com/T0351JZQ0-U03S7LK3DPG-cc3b6e5026c0-512
     </img>
 
     <h3 class = "user-name">Marty</h3>
-    <h5> Figma Wizard</h5>
+    <h5> Figmagician</h5>
     <p>Can create amazing figma animations and transitions. (If only anima worked... -.-)  </p>
   </div>
 
