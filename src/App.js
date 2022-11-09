@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div>
-      <Navbar user={user} />
+      <Navbar user={user} setUser={setUser} />
       <div className="Container">
         <Routes>
           <Route path="/" element={<Home user={user} />} />
