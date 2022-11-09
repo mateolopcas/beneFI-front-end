@@ -4,6 +4,9 @@ function Navbar({user}) {
   return (
     <nav className="nav">
       <a href="/" className="site-title">BeneFi</a>
+      
+      {user && <div className="welcome"> 
+        <span>Welcome, {user.firstName}!</span></div>}
       { user.email.length > 0 &&
       <li>
         <a href="/request-send">Request/Send</a>

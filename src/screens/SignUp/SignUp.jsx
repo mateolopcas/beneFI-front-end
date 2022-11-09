@@ -4,7 +4,7 @@ import { createUser } from "../../services/user"
 
 
 
-export default function SignUp() {
+export default function SignUp(props) {
   const [form, setForm] = useState({
     email: '',
     firstName: '',
@@ -29,74 +29,13 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     //password validation
     e.preventDefault()
-    await createUser(form)
+    const response = await createUser(form)
+    props.setUser(response)
     navigate("/request", { replace: true })
   }
 
 
 
-
-
-
-
-
-  // const [form, setForm] = useState({
-  //   email: '',
-  //   firstName: '',
-  //   lastName: '',
-  //   password: '',
-  //   confirmPassword: '',
-  //   isError: false,
-  //   errorMsg: '',
-
-
-
-  // })
-  // let navigate = useNavigate()
-
-  // const handleChange = (e) =>
-  //   setForm({
-  //     ...form,
-  //     [e.target.name]: e.target.value,
-  //   })
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   const { setUser } = props;
-  //   try {
-  //     const user = await createUser(form)
-  //     setUser(user)
-  //     navigate("/transactions", { replace: true })
-  //   } catch (error) {
-  //     console.error(error)
-  //     setForm({
-  //       firstName: '',
-  //       lastName: '',
-  //       email: '',
-  //       password: '',
-  //       confirmPassword: '',
-  //       isError: true,
-  //       errorMsg: "Sign Up Details Invalid"
-  //     })
-  //   }
-  // }
-
-  // const renderError = () => {
-  //   const toggleForm = form.isError ? 'danger' : '';
-  //   if (form.isError) {
-  //     return (
-  //       <button type='submit' className={toggleForm}>
-  //         {form.errorMsg}
-  //       </button>
-  //     )
-  //   } else {
-  //     return (
-  //       <button type='submit'>Sign Up</button>
-  //     )
-  //   }
-  // }
-
-  // const { firstName, lastName, email, password, confirmPassword } = form
   return (
 
     <div className="form-container">

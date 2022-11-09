@@ -44,20 +44,29 @@ const SignIn = (props) => {
 
       navigate("/request", { replace: true })
 
-
-
-      
     } catch (error) {
+
       console.error(error)
       setForm({
         isError: true,
-        errorMsg: "invalid creds",
+        errorMsg: "invalid login information",
         email: '',
         password: '',
       })
     }
   }
-  
+
+  const renderError = () => {
+    const toggleForm = form.isError ? 'danger' : ''
+    if (form.isError) {
+      return (
+        <button type="submit" className={toggleForm}>{form.errorMsg}</button>
+      )
+    } else {
+      <button type="submit">Sign In</button>
+    }
+  }
+
   return (
     <div className="form-container">
       <h3>Sign in</h3>
@@ -84,6 +93,7 @@ const SignIn = (props) => {
         </div>
 
         <button type="submit">Sign in</button>
+        {renderError()}
       </form>
     </div>
   )
