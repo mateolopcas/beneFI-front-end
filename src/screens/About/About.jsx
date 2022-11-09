@@ -4,19 +4,19 @@ import "./About.css"
 function About() {
   return (
 
-    <div class ="container">
-<h1 class = "heading"><span>meet  </span> Our Team</h1>
+<div className ="container">
+<h1 className = "heading"><span>meet  </span> Our Team</h1>
 
-<div class = "profiles">
-  <div class = "profile">
+<div className = "profiles">
+  <div className = "profile">
     <img src = "https://media-exp1.licdn.com/dms/image/D5603AQEMgKp6o5bTCg/profile-displayphoto-shrink_400_400/0/1665588615656?e=1673481600&v=beta&t=1bele8LmrTvlglpFgQ6xDgUbsy1d8YiVmgGe2WFYigw" class = "profile-img">
     </img>
 
-    <h3 class = "user-name">Mateo</h3>
+    <h3 className = "user-name">Mateo</h3>
     <h5>Elite Chess Player</h5>
     <p>Makes Magnus Carlsen look like a kindergartener and he's no slouch when it comes to coding!
        </p>
-          <div id="linkedin"></div>
+          
   </div>
 
 </div>

@@ -104,7 +104,7 @@ export default function SignUp() {
       <h3>Sign Up</h3>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
-          <label>First Name:</label>
+          <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; First Name:&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   </label>
           <input
             required
             type="text"
@@ -113,7 +113,7 @@ export default function SignUp() {
             onChange={handleChange}
           />
           <div className="label-input">
-            <label>Last Name:</label>
+            <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Last Name:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp;  </label>
             <input
               required
               type="text"
@@ -123,7 +123,7 @@ export default function SignUp() {
             />
           </div>
           <div className="label-input">
-            <label>Email Address:</label>
+            <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Email Address:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</label>
             <input
               required
               type="email"
@@ -133,7 +133,7 @@ export default function SignUp() {
             />
           </div>
           <div className="label-input">
-            <label>Password: </label>
+            <label>&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; Password:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </label>
             <input
               required
               type="password"
@@ -143,7 +143,7 @@ export default function SignUp() {
             />
           </div>
           <div className="label-input">
-            <label>Confirm Password:</label>
+            <label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; Confirm Password:&nbsp; &nbsp; &nbsp; &nbsp; </label>
             <input
               required
               name="confirmPassword"

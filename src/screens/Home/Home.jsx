@@ -32,9 +32,10 @@ function Index() {
             <div class="static-txt">Gifting</div>
             <ul class="dynamic-txts">
               <li><span>Crypto</span></li>
-              <li><span> Bitcoin</span></li>
+              <li><span>Bitcoin</span></li>
               <li><span>Ethereum</span></li>
-              <li><span>Dogecoin</span></li>
+              <li><span>Binance</span></li>
+              
 
             </ul>
             <div class = "text">made simple</div>
