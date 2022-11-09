@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 function Navbar({user}) {
   return (
     <nav className="nav">
-      <Link to="/" className="site-title">BeneFi</Link>
+      <Link to="/" className="site-title"><u>b.</u></Link>
       { user.email.length > 0 &&
       <li>
         <Link to="/request-send">Request/Send</Link>

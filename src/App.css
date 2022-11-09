@@ -1,5 +1,8 @@
+
+
 *{
   box-sizing:border-box;
+  font-family: Poppins, sans-serif;
 }
 
 body{
@@ -11,24 +14,89 @@ body{
   justify-content: space-between;
   align-items:center;
   gap:2rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  
 }
 
+
+
 .site-title{
-  font-size: 2rem;
+  
+  color: whitesmoke;
+  font-size: 150px;
+  font-weight:bolder;
+  margin: 0px;
+ 
+
+  font-family: Poppins, sans-serif;
+
+  
+  
+  
 }
+
+
 
 
 .nav li{
-  padding:0;
-  margin:0;
-  list-style:none;
-  display:flex;
-  gap:1rem;
+ 
+
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1px;
+  
+  
+  font-weight: bold;
+  
+  cursor: pointer;
+  
 
 }
+
+
+
+
+
 
 .nav a{
-  color:inherit;
+  color:white;
   text-decoration: none;
+  transition: transform .2;
+  
+ 
 }
+
+
+
+
+.nav a:hover{
+  transform: scale(1.05);
+  color: aqua;
+  animation: bounce 1s;
+  
+}
+
+
+
+
+
+ @keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+} 
