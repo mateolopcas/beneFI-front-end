@@ -28,12 +28,25 @@ export default function SignUp({setUser}) {
   }
 
   const handleSubmit = async (e) => {
-    //password validation
     e.preventDefault()
-    let newUser = await createUser(form)
-    setUser(newUser)
-    navigate("/request-send", { replace: true })
-  }
+    if (form.password === form.confirmPassword) {
+        let newUser = await createUser(form)
+        setUser(newUser)
+        navigate("/request-send", { replace: true })
+    } else {
+        alert(`Passwords don't match!`)
+        setForm({
+          firstName: '',
+          lastName: '',
+          email: '',
+          password: '',
+          confirmPassword: '',
+          isError: true,
+          errorMsg: "Sign Up Details Invalid"
+
+        })
+      }
+    }
 
 
 
