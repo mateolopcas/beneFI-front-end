@@ -89,9 +89,3 @@ const SignIn = (props) => {
 export default SignIn;
 
 
-
-// getUsers
-// loop through users checking email and password
-// current = user_id 
-// response = getUser(current)
-// setUser (response.data)
