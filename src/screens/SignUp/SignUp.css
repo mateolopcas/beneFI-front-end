@@ -1,7 +1,12 @@
 label{
   color:white;
-  font-size: 24px;
+  font-size: 30px;
   
+}
+
+.label-input{
+  padding: 10px;
+
 }
 
 
@@ -11,6 +16,7 @@ label{
   font-size: 70px;
   color:white;
   margin: 20px;
+  font-weight: 700;
   
 }
 
@@ -23,14 +29,28 @@ input{
   font-size: 25px;
   transition: transform .2s;
   margin: 0 auto;
+  padding: 2;
 
 }
 
 
 input:hover{
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.button{
-  background-color:red;
+button{
+  font-size: 30px;
+  font-weight: bold;
+  color:white;
+  border-radius: 10px;
+  border-color: aqua;
+  padding: 7px;
+  margin: 30px;
+  transition: transform .5s;
+  background-color: #14da2b;
+  
+}
+
+button:hover{
+  transform:scale(1.1)
 }

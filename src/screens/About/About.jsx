@@ -16,7 +16,7 @@ function About() {
     <h5>Elite Chess Player</h5>
     <p>Makes Magnus Carlsen look like a kindergartener and he's no slouch when it comes to coding!
        </p>
-          <div id="linkedin"></div>
+          
   </div>
 
 </div>
@@ -53,7 +53,7 @@ function About() {
     </img>
 
     <h3 className="user-name">Marty</h3>
-    <h5> Figma Wizard</h5>
+    <h5> Figmagician</h5>
     <p>Can create amazing figma animations and transitions. (If only anima worked... -.-)  </p>
   </div>
 

@@ -13,17 +13,19 @@ function Index() {
             <div className="static-txt">Gifting</div>
             <ul className="dynamic-txts">
               <li><span>Crypto</span></li>
-              <li><span> Bitcoin</span></li>
+              <li><span>Bitcoin</span></li>
               <li><span>Ethereum</span></li>
-              <li><span>Dogecoin</span></li>
+              <li><span>Binance</span></li>
+              
 
             </ul>
             <div className= "text">made simple</div>
             
           </div>
+         
           <img
-            className="bitcoin-logo"
-            src="https://anima-uploads.s3.amazonaws.com/projects/6369f3950c4381d09f8127f4/releases/6369f3a12e9e4aba1410aa37/img/bitcoin-logo@2x.svg"
+            className="bitcoin-logo1"
+            src="https://i.postimg.cc/3wT0jhf6/iphone-Test.gif"
             alt="bitcoin-logo"
           />
           
