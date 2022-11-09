@@ -14,7 +14,6 @@ function Profile({user, setUser}) {
     confirmPassword: user.password
   })
 
-  const [remove, setRemove] = useState(false)
   const [edit, setEdit] = useState(false)
   
   let navigate = useNavigate()
@@ -29,21 +28,33 @@ function Profile({user, setUser}) {
   }
 
   const handleEdit = (e) => {
-    e.target.parentElement.style.display = "none"
     setEdit(true)
   }
   const handleDelete = async (e) => {
     e.preventDefault()
-    setRemove(true)
     await deleteUser(user._id)
+    setUser({
+      _id: "",
+      email: "",
+      firstName: "",
+      lastName: "",
+      password: "",
+      avatarImg: "",
+      transactions: []
+    })
     navigate('/', { replace: true })
 
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await updateUser(user._id, profile)
-    setUser(profile)
-    navigate('/profile', { replace: true })
+    if (profile.password !== profile.confirmPassword) {
+      alert("Passwords don't match")
+    } else {
+      await updateUser(user._id, profile)
+      setUser(profile)
+      setEdit(false)
+      navigate('/profile', { replace: true })
+    }
   }
   const { firstName, lastName, email, password, confirmPassword, avatarImg } = profile
 
@@ -54,7 +65,7 @@ function Profile({user, setUser}) {
       {edit === true &&
         <form onSubmit={handleSubmit}>
           <div>
-          <label>Email Address: </label><input
+          <label>Email Address: </label><input required
             placeholder="email"
             name="email"
             value={email}
@@ -62,32 +73,32 @@ function Profile({user, setUser}) {
           />
           </div>
           <div>
-          <label>First Name: </label><input
+          <label>First Name: </label><input required
             placeholder="First Name"
             name="firstName"
             value={firstName}
             onChange={handleChange}
           /></div>
           <div>
-          <label>Last Name: </label><input
+          <label>Last Name: </label><input required
             placeholder="Last Name"
             name="lastName"
             value={lastName}
             onChange={handleChange}
           /></div>
-          <div><label>Password: </label><input
+          <div><label>Password: </label><input required
             placeholder="password"
             name="password"
             value={password}
             onChange={handleChange}
           /></div>
-          <div><label>Confirm Password: </label><input
+          <div><label>Confirm Password: </label><input required
             placeholder="Confirm password"
             name="confirmPassword"
             value={confirmPassword}
             onChange={handleChange}
           /></div>
-          <div><label>Avatar Image: </label><input
+          <div><label>Avatar Image: </label><input required
             placeholder="Avatar Image"
             name="avatarImg"
             value={avatarImg}
@@ -97,8 +108,12 @@ function Profile({user, setUser}) {
         </form>
       }
       <div>
-      <button onClick={handleEdit} >Edit Profile</button>
-      <button onClick={handleDelete}>Delete Profile</button>
+        {!edit &&
+        <div>
+        <button onClick={handleEdit} >Edit Profile</button>
+            <button onClick={handleDelete}>Delete Profile</button>
+        </div>
+        }
       </div>
       
     </div>
