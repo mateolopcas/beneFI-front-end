@@ -29,9 +29,8 @@ function Profile({user, setUser}) {
   }
 
   const handleEdit = (e) => {
-    e.target.style.display = "none"
+    e.target.parentElement.style.display = "none"
     setEdit(true)
-
   }
   const handleDelete = async (e) => {
     e.preventDefault()
@@ -97,10 +96,10 @@ function Profile({user, setUser}) {
           <button type="submit">Submit</button>
         </form>
       }
-
+      <div>
       <button onClick={handleEdit} >Edit Profile</button>
       <button onClick={handleDelete}>Delete Profile</button>
-      
+      </div>
       
     </div>
   )
