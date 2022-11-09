@@ -11,7 +11,14 @@ function Transactions({user}) {
   return (
     <div className='transactions-screen'>
       <h2>Transaction History:</h2>
-      <ul>
+      <table>
+        <tr>
+          <th>USD</th>
+          <th>Cryptocurrency</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Sent On</th>
+        </tr>
         {user.email.length > 0 &&
         user.transactions.map((transaction, index)=> {
           return (
@@ -22,7 +29,7 @@ function Transactions({user}) {
             )
           })
         }
-      </ul>
+      </table>
     </div>
   )
 }
