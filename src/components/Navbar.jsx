@@ -36,7 +36,7 @@ function Navbar({user, setUser}) {
       </li>
       { user.email.length === 0 &&
       <li>
-        <Link to="/sign-in">Sign In</Link>
+        <Link to="/sign-in">Log In</Link>
       </li>
       }
       { user.email.length === 0 &&
