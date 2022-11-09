@@ -11,7 +11,6 @@ export const getUsers = async () => {
 
 export const getUser = async (id) => {
   try {
-    console.log(usersApi)
     const response = await usersApi.usersApi.get(`/userProfiles/${id}`);
     return response.data;
   } catch (error) {
@@ -31,7 +30,7 @@ export const createUser = async (userData) => {
 
 export const updateUser = async (id, userData) => {
   try {
-    const response = await usersApi.put(`/userProfiles/${id}`, userData)
+    const response = await usersApi.usersApi.put(`/userProfiles/${id}`, userData)
     return response.data;
   } catch (error) {
     throw error;
@@ -40,7 +39,7 @@ export const updateUser = async (id, userData) => {
 
 export const deleteUser = async (id) => {
   try {
-    const response = await usersApi.delete(`/userProfiles/${id}`);
+    const response = await usersApi.usersApi.delete(`/userProfiles/${id}`);
     return response.data;
   } catch (error) {
     throw error;
