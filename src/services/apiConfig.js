@@ -3,7 +3,7 @@ import Axios from 'axios';
 let apiUrl;
 
 const apiUrls = {
-  production: "https://benefi-backend-production.up.railway.app/transactions",
+  production: "https://benefi-backend-production.up.railway.app/",
   development: "http://localhost:3000"
 }
 
@@ -22,7 +22,7 @@ console.log(api)
 let usersApiUrl;
 
 const usersApiUrls = {
-  production: "https://benefi-backend-production.up.railway.app/userprofiles/",
+  production: "https://benefi-backend-production.up.railway.app/",
   development: "http://localhost:3000"
 }
 
