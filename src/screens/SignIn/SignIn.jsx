@@ -63,7 +63,7 @@ const SignIn = (props) => {
       <h3>Sign in</h3>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
-          <label>email:</label>
+          <label>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Email:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</label>
           <input
             required
             type="email"
@@ -73,7 +73,7 @@ const SignIn = (props) => {
           />
         </div>
         <div className="label-input">
-          <label>Password:</label>
+          <label>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Password: &nbsp; &nbsp;&nbsp;</label>
           <input
             required
             type="password"
@@ -83,7 +83,7 @@ const SignIn = (props) => {
           />
         </div>
 
-        <button type="submit">Sign in</button>
+        <button type="submit">Login</button>
       </form>
     </div>
   )

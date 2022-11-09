@@ -48,6 +48,7 @@ body{
   text-align: center;
   font-size: 28px;
   letter-spacing: 1px;
+  transition: transform .2;
   
   
   font-weight: bold;
@@ -58,7 +59,9 @@ body{
 }
 
 
-
+.nav li:hover{
+  transform:scale(1.1)
+}
 
 
 
@@ -75,8 +78,8 @@ body{
 
 .nav a:hover{
   transform: scale(1.05);
-  color: aqua;
-  animation: bounce 1s;
+  color: #14da2b;
+  animation: bounce .75s;
   
 }
 
@@ -91,12 +94,12 @@ body{
 	}
 
 	40% {
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px);
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
 	}
 
 	80% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 } 
