@@ -1,3 +1,7 @@
+import "./Transaction.css"
+
+
+
 function Transaction(props) {
   let { data } = props
   let shortDate = data.sentOn.substring(0, 10)

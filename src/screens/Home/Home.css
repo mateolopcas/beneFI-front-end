@@ -67,8 +67,8 @@
 
 .bitcoin-logo1 {
   top:250px;
-  height: 775px;
-  left: 812px;
+  height: 750px;
+  left: 920px;
   position: absolute;
   border-radius: 40px;
   border-color:white;
@@ -115,7 +115,6 @@
   height: 400px;
   width: 375px;
   margin: 30px;
-
   background-color: rgba(245, 245, 245, 0);
 
 }

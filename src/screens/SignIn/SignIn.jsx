@@ -57,7 +57,7 @@ const SignIn = (props) => {
 
   return (
     <div className="form-container">
-      <h3>Sign in</h3>
+      <h3>Login</h3>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
           <label>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Email:&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;</label>

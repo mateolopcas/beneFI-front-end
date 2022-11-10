@@ -18,7 +18,7 @@ function Navbar({user, setUser}) {
       <Link to="/" className="site-title"><u>b.</u></Link>
       { user.email.length > 0 &&
       <li>
-        <Link to="/request-send">Request/Send</Link>
+        <Link to="/request-send">Send &nbsp;/&nbsp; Request</Link>
       </li>
       }
       { user.email.length > 0 &&
@@ -36,7 +36,7 @@ function Navbar({user, setUser}) {
       </li>
       { user.email.length === 0 &&
       <li>
-        <Link to="/sign-in">Log In</Link>
+        <Link to="/sign-in">Login</Link>
       </li>
       }
       { user.email.length === 0 &&

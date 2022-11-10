@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { createTransaction, linkProfile } from '../../services/transaction.js'
 import { getUsers, getUser } from '../../services/user.js'
 import { Link } from 'react-router-dom'
+import "./Request.css"
 
 function Request({user}) {
   const [request, setRequest] = useState(false)
@@ -78,16 +79,16 @@ function Request({user}) {
 
   return (
     <div className={`send-screen ${request ? `request`: `send`}`}>
-      <h1>Send or Request a Transaction</h1>
+      
       <button onClick={toggle}>Switch to
-      {request === false && ` request`}
-      {request === true && ` send`}
+      {request === false && ` REQUEST`}
+      {request === true && ` SEND`}
       </button>
-      <h2>You are currently {request ? `request` : `send`}
-      ing a transaction.</h2>
+      <h2>You're {request ? `REQUEST` : `SEND`}
+      ING a transaction...</h2>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
-          <label>To:</label>
+          <label1>To:</label1>
           <input
             required
             type="text"
@@ -96,7 +97,7 @@ function Request({user}) {
             onChange={handleChange}
           />
           <div className="label-input">
-            <label>From:</label>
+            <label1>From:</label1>
             <input
               required
               type="text"
@@ -106,14 +107,14 @@ function Request({user}) {
             />
           </div>
           <div className="label-select">
-            <label>Currency: </label>
+            <label1>Currency: </label1>
             <select
             required
             name='currency'
             value={form.currency}
             onChange={handleChange}
             >
-              <option value=''>Select crypto</option>
+              <option value=''>select crypto</option>
               <option value='Bitcoin'>Bitcoin</option>
               <option value='Ethereum'>Ethereum</option>
               <option value='Binance'>Binance</option>
@@ -121,14 +122,14 @@ function Request({user}) {
             </select>
           </div>
           <div className="label-select">
-            <label>Amount: </label>
+            <label1>Amount: </label1>
             <select
             required
             name='usdAmount'
             value={form.usdAmount}
             onChange={handleChange}
             >
-              <option value=''>Select amount</option>
+              <option value=''>select amount</option>
               <option value='25'>$25</option>               
               <option value='50'>$50</option>
               <option value='75'>$75</option>
@@ -136,10 +137,10 @@ function Request({user}) {
             </select>
           </div>
         </div>
-        <button type="submit">Send</button>
+        <button type="submit">SEND</button>
       </form>
       <Link to='/'>
-      <button>Home</button>
+      
       </Link>
     </div>
   )

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { updateUser, deleteUser, getUser } from "../../services/user"
 import { useNavigate } from "react-router-dom"
 import ProfileData from '../../components/ProfileData'
+import "./Profile.css"
 
 function Profile({user, setUser}) {
   const [profile, setProfile] = useState({
