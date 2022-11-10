@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 
+
 function Index() {
   
 
@@ -9,8 +10,12 @@ function Index() {
       <div className="index screen">
         <div className="overlap-group1">
           
-          <div className= "wrapper">
-            <div className="static-txt">Gifting</div>
+          <div className="wrapper">
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <div className="static-txt">gifting</div>
             <ul className="dynamic-txts">
               <li><span>Crypto</span></li>
               <li><span>Bitcoin</span></li>
@@ -19,13 +24,13 @@ function Index() {
               
 
             </ul>
-            <div className= "text">made simple</div>
+            <div className= "text">made simple.</div>
             
           </div>
          
           <img
             className="bitcoin-logo1"
-            src="https://i.postimg.cc/3wT0jhf6/iphone-Test.gif"
+            src="https://i.postimg.cc/ZnXkzhfm/bene-Fi-Final.gif"
             alt="bitcoin-logo"
           />
           

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Transaction.css"
 
 
 import Transaction from '../../components/Transaction.jsx'
@@ -10,15 +11,17 @@ function Transactions({user}) {
 
   return (
     <div className='transactions-screen'>
-      <h2>Transaction History:</h2>
+      <space>&nbsp;</space>
+      <h2>&nbsp; &nbsp;Transaction History:</h2>
+      <p>&nbsp;</p>
       <table>
         <thead>
         <tr>
           <th>USD</th>
-          <th>Cryptocurrency</th>
-          <th>From</th>
-          <th>To</th>
-          <th>Sent On</th>
+          <th>CRYPTO</th>
+          <th>FROM</th>
+          <th>TO</th>
+          <th>SENT ON</th>
         </tr>
         </thead>
         <tbody>
