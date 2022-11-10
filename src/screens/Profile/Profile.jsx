@@ -67,7 +67,7 @@ function Profile({user, setUser}) {
       {edit === true &&
         <form onSubmit={handleSubmit}>
           <div>
-          <label>Email Address: </label><input required
+          <label2>&nbsp;&nbsp;&nbsp;&nbsp;Email Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label2><input required
             placeholder="email"
             name="email"
             value={email}
@@ -75,32 +75,32 @@ function Profile({user, setUser}) {
           />
           </div>
           <div>
-          <label>First Name: </label><input required
+          <label2>&nbsp;&nbsp;&nbsp;&nbsp;First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label2><input required
             placeholder="First Name"
             name="firstName"
             value={firstName}
             onChange={handleChange}
           /></div>
           <div>
-          <label>Last Name: </label><input required
+          <label2>&nbsp;&nbsp;&nbsp;&nbsp;Last Name:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label2><input required
             placeholder="Last Name"
             name="lastName"
             value={lastName}
             onChange={handleChange}
           /></div>
-          <div><label>Password: </label><input required
+          <div><label2>&nbsp;&nbsp;&nbsp;&nbsp;Password: &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label2><input required
             placeholder="password"
             name="password"
             value={password}
             onChange={handleChange}
           /></div>
-          <div><label>Confirm Password: </label><input required
+          <div><label2>&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password:   &nbsp; </label2><input required
             placeholder="Confirm password"
             name="confirmPassword"
             value={confirmPassword}
             onChange={handleChange}
           /></div>
-          <div><label>Avatar Image: </label><input
+          <div><label2>&nbsp;&nbsp;&nbsp;&nbsp;Avatar Image: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label2><input
             placeholder="Avatar Image"
             name="avatarImg"
             value={avatarImg}
