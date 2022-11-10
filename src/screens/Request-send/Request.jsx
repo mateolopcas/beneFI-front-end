@@ -84,11 +84,11 @@ function Request({user}) {
       {request === false && ` REQUEST`}
       {request === true && ` SEND`}
       </button>
-      <h2>You're {request ? `REQUEST` : `SEND`}
+      <h2>&nbsp;&nbsp;You're {request ? `REQUEST` : `SEND`}
       ING a transaction...</h2>
       <form onSubmit={handleSubmit}>
         <div className="label-input">
-          <label1>To:</label1>
+          <label1>&nbsp;&nbsp;To:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label1>
           <input
             required
             type="text"
@@ -97,7 +97,7 @@ function Request({user}) {
             onChange={handleChange}
           />
           <div className="label-input">
-            <label1>From:</label1>
+            <label1>&nbsp;From:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label1>
             <input
               required
               type="text"
@@ -107,7 +107,7 @@ function Request({user}) {
             />
           </div>
           <div className="label-select">
-            <label1>Currency: </label1>
+            <label1>&nbsp;&nbsp;Currency:&nbsp;&nbsp; </label1>
             <select
             required
             name='currency'
@@ -122,7 +122,7 @@ function Request({user}) {
             </select>
           </div>
           <div className="label-select">
-            <label1>Amount: </label1>
+            <label1>&nbsp;&nbsp;Amount:&nbsp;&nbsp;&nbsp;&nbsp; </label1>
             <select
             required
             name='usdAmount'
