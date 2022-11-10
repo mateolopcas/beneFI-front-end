@@ -25,7 +25,7 @@ const SignIn = (props) => {
     event.preventDefault()
     let current
 
-    try {
+
       const users = await getUsers()
 
 
@@ -34,30 +34,27 @@ const SignIn = (props) => {
           current = user._id
 
         }
+      })
 
-      }
-
-      )
+      if (current !== undefined) {
       const response = await getUser(current)
 
       await props.setUser(response)
 
       navigate("/request-send", { replace: true })
-
-
-
-      
-    } catch (error) {
-      console.error(error)
+      } else {
+      alert(`Invalid information!`)
       setForm({
         isError: true,
-        errorMsg: "invalid creds",
+        errorMsg: "invalid information",
         email: '',
         password: '',
       })
     }
-  }
-  
+  }  
+
+
+
   return (
     <div className="form-container">
       <h3>Login</h3>
@@ -92,9 +89,3 @@ const SignIn = (props) => {
 export default SignIn;
 
 
-
-// getUsers
-// loop through users checking email and password
-// current = user_id 
-// response = getUser(current)
-// setUser (response.data)

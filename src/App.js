@@ -26,12 +26,12 @@ function App() {
 
   return (
     <div>
-      <Navbar user={user} />
+      <Navbar user={user} setUser={setUser} />
       <div className="Container">
         <Routes>
           <Route path="/" element={<Home user={user} />} />
-          <Route path="/profile" element={<Profile user={user} setUser={setUser } />} />
-          <Route path="/request-send" element={<Request user={user}/>} />
+          <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
+          <Route path="/request-send" element={<Request user={user} />} />
           <Route path="/about" element={<About user={user}/>} />
           <Route path="/transactions" element={<Transactions user={user}/>} />
           <Route path="/sign-in" element={<SignIn setUser={setUser}/>} />

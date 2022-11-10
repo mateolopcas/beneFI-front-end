@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { updateUser, deleteUser } from "../../services/user"
+import { updateUser, deleteUser, getUser } from "../../services/user"
 import { useNavigate } from "react-router-dom"
 import ProfileData from '../../components/ProfileData'
 import "./Profile.css"
@@ -52,7 +52,8 @@ function Profile({user, setUser}) {
       alert("Passwords don't match")
     } else {
       await updateUser(user._id, profile)
-      setUser(profile)
+      let updatedUser = await getUser(user._id)
+      setUser(updatedUser)
       setEdit(false)
       navigate('/profile', { replace: true })
     }
@@ -99,7 +100,7 @@ function Profile({user, setUser}) {
             value={confirmPassword}
             onChange={handleChange}
           /></div>
-          <div><label>Avatar Image: </label><input required
+          <div><label>Avatar Image: </label><input
             placeholder="Avatar Image"
             name="avatarImg"
             value={avatarImg}
