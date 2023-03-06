@@ -19,7 +19,6 @@ export default function SignUp({setUser}) {
   let navigate = useNavigate()
 
   const handleChange = (e) => {
-    console.log(e.target.value)
     const { name, value } = e.target
     setForm({
       ...form,
